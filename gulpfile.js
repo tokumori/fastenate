@@ -11,20 +11,18 @@ var PathTo = {
 
 gulp.task('watch-files', function (){
   gulp.watch(PathTo.SassFiles, ['compile-sass']);
-  // gulp.watch(PathTo.PublicCssFiles);
+  gulp.watch(PathTo.PublicCssFiles, ['html']);
 });
 
 gulp.task('compile-sass', function (){
   return gulp
           .src(PathTo.SassFiles, ['compile-sass'])
-          .pipe(sass())
-          .pipe(gulp.dest(PathTo.PublicCss))
-          .pipe(connect.reload());
-
+          .pipe(sass({ errLogToConsole: true }))
+          .pipe(gulp.dest(PathTo.PublicCss));
 });
 
 gulp.task('html', function (){
-  return gulp.src('./public/*.html')
+  return gulp.src('./public/index.html')
     .pipe(connect.reload());
 });
 

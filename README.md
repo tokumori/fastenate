@@ -1,24 +1,24 @@
 # Fastenate
 
 ## Set-up
-After forking and cloning this project, `npm install` then `gulp`
+After forking and cloning this project`npm install` then `gulp`
 
 Do commit often!
 
-##### **Stack**
+##### Stack
 - Use Sass for styling.  
 - Use any frontend framework(s) that may make styling faster for the project (Bourbon, Foundation, Bootstrap, etc)  
 
-##### **Fonts**
+##### Fonts
 Google fonts used in the layout:
 
 - Oswald Regular  
 - Lato Regular  
 
-##### **Media Queries**
+##### Media Queries
 Be sure you are viewing the layouts at Actual Size. Use media query ranges as they make sense for the layout. The only 'media query' requirement is that the final webapp matches the mockups at the sizes specified, and that they gracefully transition at each range.
 
-##### **Content**
+##### Content
 The content shown in the mockup is placeholder text only. It's easier to work with your own static content for styling, before loading in dynamic data. see `layouts/unformatted_text.txt`
 
 For each module:
@@ -29,7 +29,7 @@ For each module:
 - the subtitle line should never span more than 2 lines tall.
 - the text snippet should never span more than 4 lines tall, except for the small size, where it should be the height of the text.
 
-##### **Interaction, Loading Data**
+##### Interaction, Loading Data
 
 when "My Boards" is clicked  
 create an xhr get request to `/api/my_boards.json`
@@ -53,3 +53,7 @@ whenever a json document is loaded, generate the appropriate markup for your lay
 - views : score
 - description : hardcode 2 sentences of lorem ipsum
 
+## Resources
+[Slide Deck on XHR @ https://slides.com/sgnl/xhr/](https://slides.com/sgnl/xhr/)
+[Slide Deck on jQuery w/ AJAX @ http://slides.com/sgnl/intro-jquery#/13](http://slides.com/sgnl/intro-jquery#/13)
+[XMLHttpRequest on MDN](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)

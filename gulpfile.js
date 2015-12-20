@@ -17,7 +17,7 @@ gulp.task('watch-files', function (){
 gulp.task('compile-sass', function (){
   return gulp
           .src(PathTo.SassFiles, ['compile-sass'])
-          .pipe(sass({ errLogToConsole: true }))
+          .pipe(sass().on('error', sass.logError))
           .pipe(gulp.dest(PathTo.PublicCss));
 });
 
@@ -29,9 +29,9 @@ gulp.task('html', function (){
 gulp.task('public-server', function (){
   connect.server({
     root: './public',
-    port: 8080,
+    port: 8282,
     livereload: true
   });
 });
 
-gulp.task('default', ['public-server', 'compile-sass', 'watch-files']);
+gulp.task('default', ['compile-sass', 'watch-files', 'public-server']);

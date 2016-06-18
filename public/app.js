@@ -56,6 +56,10 @@ function createPage (elem, ind, arr) {
   $views.text(elem.data.score + ' views');
   $info.append($views);
 
+  var $body = $('<div/>');
+  $body.addClass('body');
+  $body.text("ZOMG DIS SO AWESOME!!! CAPS LOCK = CRUISE CONTROL FOR COOL!!! No, seriously though, stop yelling");
+  $post.append($body);
 }
 
 function timeConvert (millisec) {

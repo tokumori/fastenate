@@ -1,4 +1,12 @@
+@import 'partials/reset';
+*{
+  box-sizing: border-box;
+}
+
 body {
+  background-image: url("../assets/bg.jpg");
+
+
   h1 {
     background-color: #fff;
   }

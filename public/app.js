@@ -68,18 +68,18 @@ function timeConvert (millisec) {
   var hours = Math.floor(millisec / (1000 * 3600));
   var days = Math.floor(millisec / (1000 * 3600 * 24));
   if (seconds < 60) {
-      return 'Submitted ' + seconds + ' Seconds Ago ';
+      return seconds + ' Seconds Ago ';
   } else if (minutes === 1) {
-      return 'Submitted ' + minutes + ' Minute Ago ';
+      return minutes + ' Minute Ago ';
   } else if (minutes < 60) {
-      return 'Submitted ' + minutes + ' Minutes Ago ';
+      return minutes + ' Minutes Ago ';
   } else if (hours === 1) {
-      return 'Submitted ' + hours + ' Hour Ago ';
+      return hours + ' Hour Ago ';
   } else if (hours < 24) {
-      return 'Submitted ' + hours + ' Hours Ago ';
+      return hours + ' Hours Ago ';
   } else if (days === 1) {
-      return 'Submitted ' + days + ' Day Ago ';
+      return days + ' Day Ago ';
   } else {
-      return 'Submitted ' + days + ' Days Ago ';
+      return days + ' Days Ago ';
   }
 }
